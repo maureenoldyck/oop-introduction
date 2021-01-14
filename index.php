@@ -7,6 +7,7 @@ error_reporting(E_ALL);
 
 require './classes/Beverage.php';
 require './classes/Beer.php';
+require './classes/Beer2.php';
 
 
 echo 'EXERCISE 1 </br>';
@@ -42,7 +43,35 @@ USE TYPEHINTING EVERYWHERE! */
 
 $duvel = new Beer('blond', 3.5, 'Duvel', 8.5);
 echo $duvel->getAlcoholpercentage() . '</br>';
-echo $duvel->acoholpercentage . '% </br>';
+// echo $duvel->acoholpercentage . '% </br>';
 echo $duvel->color . '</br>';
 echo $duvel->getInfo() . '</br>';
-$cola->getAlcoholpercentage();
+// $cola->getAlcoholpercentage(); --> to get error message
+echo '<hr>';
+
+
+echo 'EXERCISE 3 </br>';
+/*Copy the code of exercise 2 to here and delete everything related to cola.
+Make all properties private.
+Make all the other prints work without error.
+After fixing the errors. Change the color of Duvel to light instead of blond and
+also print this new color on the screen after all the other things that were already printed (to be sure that the color has changed).
+Create a new private method in the Beer class called beerInfo which returns "Hi i'm Duvel and have an alochol percentage of 8.5 and I have a light color."
+Make sure that you use the variables and not just this text line.
+Print this method on the screen on a new line.
+USE TYPEHINTING EVERYWHERE!
+*/
+$duvel2 = new Beer2('light', 3.5, 'Duvel', 8.5);
+echo $duvel2->getAlcoholpercentage() . '</br>';
+echo $duvel2->color . '</br>';
+echo $duvel2->getInfo() . '</br>';
+echo $duvel2->showBeerInfo();
+echo '<hr>';
+
+
+
+
+
+
+
+// echo 'EXERCISE 4 </br>';

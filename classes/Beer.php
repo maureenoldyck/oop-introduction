@@ -14,7 +14,8 @@ class Beer extends Beverage
 
     public function getAlcoholpercentage() 
     {
-        return 'The alcoholpercentage of ' . $this->name . ' is '. $this->acoholpercentage . '%.';
+        echo 'The alcoholpercentage of ' . $this->name . ' is '. $this->acoholpercentage . '%. </br>';
+        echo 'The alcoholpercentage is ' . number_format($this->acoholpercentage, 2) . '%.';
     }
 }
 
